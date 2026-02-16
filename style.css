@@ -94,6 +94,7 @@ nav a.active {
         padding: 1rem solid;
         background-color: #161616;
         border-top: 0.1rem solid rgba(0,0,0,0.1);
+        z-index: 1000;
     }
 
     nav.active {
@@ -280,7 +281,7 @@ span{
 }
 
 .exp-img img{
-    width: 4vw;
+    width: 7vw;
     min-width: 60px;
     cursor: pointer;
     transition: 0.2s linear;
@@ -515,17 +516,6 @@ span{
     animation: words 2s infinite;
 }
 
-/*.typing-text span::after{
-    content: "";
-    background-color: transparent;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px transparent;
-    right: -8;
-    animation: cursor 0.6s infinite;
-}*/
-
 .judul-header{
     font-size: 34px;
     color: #b74b4b;
@@ -549,36 +539,42 @@ span{
     }
 }
 
-@media(max-width:995px){
-    .home{
+@media (max-width: 995px) {
+    .home {
         flex-direction: column;
+        align-items: justify;
+        text-align: justify;
     }
 
-    .home .home-content h3{
-        font-size: 2rem;
+    .home-content h1 {
+        font-size: 0.5 rem; 
+        line-height: 1.2;
+        word-wrap: break-word;
+        margin: 1 rem 0;
     }
 
-    .home-content h1{
-        font-size: 4rem;
+    .home .home-content h3 {
+        font-size: 0.5 rem;
+        margin: 0.5rem 0.5 rem;
     }
 
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-
-    /* reduce section side padding on small screens to avoid overflow */
-    section{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    /* add horizontal padding to home and about content on small screens */
     .home .home-content,
     .about .about-content,
-    .about-section .about-content{
-        padding: 0 5rem;
+    .about-section .about-content {
+        padding: 0 0.4 rem;
+        margin: 0;
+        width: 100%;
         box-sizing: border-box;
     }
 
+    .home-img img {
+        width: 60vw;
+        max-width: 300px;
+        margin-top: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
 }
