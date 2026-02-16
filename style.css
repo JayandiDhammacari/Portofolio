@@ -15,6 +15,11 @@ html{
     scroll-behavior: smooth;
 }
 
+/* prevent any horizontal page scrolling */
+html, body {
+    overflow-x: hidden;
+}
+
 body{
     width: 100%;
     height: 100vh;
@@ -137,6 +142,14 @@ nav a.active {
 section{
     min-height: 50vh;
     padding: 5rem 9% 5rem;
+}
+
+/* Add consistent horizontal padding for specific sections */
+.home,
+.about,
+.about-section {
+    padding-left: 9%;
+    padding-right: 9%;
 }
 
 .home{
@@ -542,16 +555,30 @@ span{
     }
 
     .home .home-content h3{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .home-content h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .home-img img{
         width: 70vw;
         margin-top: 4rem;
+    }
+
+    /* reduce section side padding on small screens to avoid overflow */
+    section{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* add horizontal padding to home and about content on small screens */
+    .home .home-content,
+    .about .about-content,
+    .about-section .about-content{
+        padding: 0 5rem;
+        box-sizing: border-box;
     }
 
 }
